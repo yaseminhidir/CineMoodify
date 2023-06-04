@@ -1,0 +1,85 @@
+.v-card--reveal {
+    bottom: 0;
+    opacity: 1 !important;
+    position: absolute !important;
+    width: 100%;
+  }
+  v-card{
+    max-width:100%
+  }
+  .movie-card{
+    height:100%;
+
+  }
+
+  .movie-title{}
+  .mood-btn{
+    height:unset !important
+  }
+  .body-background{
+    background-image: url(cinema.jpg);
+    width: 100vw;
+    height: 100%;
+    background-size: cover;
+    background-position: bottom;
+    position:relative;
+    background-image: url(cinema.jpg); 
+    width:100%;
+    z-index:0
+  }
+  .body-background:after{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: black;
+    opacity: .5;
+    z-index:-1;
+    content:""
+  }
+  .body-background p{
+    z-index:9
+  }
+  .ticker-wrapper {
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .ticker-area {
+    display: flex;
+    align-items:center;
+    white-space: nowrap;
+    animation: ticker 90s linear infinite;
+  }
+  
+  .ticker-item {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  .ticker-wrapper:hover .ticker-area {
+    animation-play-state: paused;
+  }
+  @keyframes ticker {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media(max-width:992px){
+    .ticker-item.text-h1 {
+      font-size:35px !important
+    }
+  }
